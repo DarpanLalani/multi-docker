@@ -11,7 +11,7 @@
           - uses: actions/checkout@v3
           - run: docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
           - run: docker build -t darpanlalani/react-test -f ./client/Dockerfile.dev ./client
-          - run: docker run -e CI=true darpan/react-test npm test
+          - run: docker run -e CI=true darpanlalani/react-test npm test
      
           - run: docker build -t darpanlalani/multi-client-28-01 ./client
           - run: docker build -t darpanlalani/multi-nginx-28-01 ./nginx
